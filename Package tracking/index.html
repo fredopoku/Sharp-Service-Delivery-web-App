@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Package Tracking</title>
+    <link rel="stylesheet" href="track.style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="Company Logo" class="logo">
+            <h1>Package Tracking</h1>
+            <p>Track your package in real-time with our interactive platform.</p>
+        </header>
+
+        <section class="tracking-form">
+            <h2>Enter Your Tracking Number</h2>
+            <form id="tracking-form">
+                <input type="text" id="tracking-number" placeholder="Enter your tracking number" required>
+                <button type="submit" id="track-btn">Track</button>
+            </form>
+        </section>
+
+        <section class="tracking-result" id="tracking-result">
+            <h2>Tracking Status</h2>
+            <div id="result-message">
+                <p>Enter your tracking number to see status.</p>
+            </div>
+            <div id="loading-spinner" class="hidden">
+                <div class="spinner"></div>
+            </div>
+            <div id="tracking-history" class="hidden">
+                <h3>Tracking History</h3>
+                <ul id="history-list"></ul>
+            </div>
+            <div id="progress-bar" class="hidden">
+                <div id="progress-bar-fill"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Package Tracking Company. All Rights Reserved.</p>
+    </footer>
+
+    <script src="track.script.js"></script>
+</body>
+</html>
