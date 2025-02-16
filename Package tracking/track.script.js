@@ -73,5 +73,3 @@ function getTimeAgo(dateString) {
     if (diffInMinutes > 0) return `${diffInMinutes} minute(s) ago`;
     return `${diffInSeconds} second(s) ago`;
 }
-
-
