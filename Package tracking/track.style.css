@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background: #f8f9fa;
+    transition: background 0.3s, color 0.3s;
 }
 
 .container {
@@ -17,9 +18,17 @@ header {
     padding: 30px;
 }
 
-.logo {
-    width: 100px;
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
+}
+
+.header-image {
+    max-width: 250px; /* Adjust the size of the logo */
+    height: auto;
+    border-radius: 10px; /* Optional: adds rounded corners */
 }
 
 h1 {
@@ -34,7 +43,7 @@ h2 {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     background: #2C3E50;
     color: #fff;
     position: fixed;
@@ -57,10 +66,16 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #2980B9;
 }
 
 button:disabled {
     background-color: #bdc3c7;
+    cursor: not-allowed;
 }
 
 .hidden {
@@ -73,12 +88,23 @@ button:disabled {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    animation: spin 2s linear infinite;
+    animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Scrollable tracking details */
+#tracking-history {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
 /* Progress bar styles */
@@ -95,7 +121,7 @@ button:disabled {
     background-color: #3498DB;
     border-radius: 5px;
     width: 0%;
-    transition: width 0.5s ease;
+    transition: width 0.5s ease-in-out;
 }
 
 ul {
@@ -106,7 +132,7 @@ ul {
 li.history-item {
     margin: 10px 0;
     font-size: 18px;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease-in-out, opacity 0.5s;
     opacity: 0;
     animation: fadeIn 1s forwards;
 }
@@ -130,6 +156,48 @@ li:hover {
     font-weight: bold;
 }
 
-footer p {
-    margin: 0;
+/* Dark mode support */
+.dark-mode {
+    background: #2C3E50;
+    color: #ECF0F1;
+}
+
+.dark-mode input[type="text"] {
+    background: #34495E;
+    color: white;
+    border: 1px solid #BDC3C7;
+}
+
+.dark-mode button {
+    background: #1ABC9C;
+}
+
+.dark-mode button:hover {
+    background: #16A085;
+}
+
+.dark-mode #progress-bar {
+    background-color: #34495E;
+}
+
+.dark-mode #progress-bar-fill {
+    background-color: #1ABC9C;
+}
+
+/* Dark mode toggle button */
+#toggle-dark-mode {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#toggle-dark-mode:hover {
+    background: #555;
 }
