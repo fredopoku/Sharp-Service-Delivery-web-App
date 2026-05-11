@@ -1,0 +1,203 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-image {
+    max-width: 250px; /* Adjust the size of the logo */
+    height: auto;
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+h1 {
+    color: #2C3E50;
+    font-size: 36px;
+}
+
+h2 {
+    color: #3498DB;
+    font-size: 28px;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background: #2C3E50;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #2980B9;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498DB;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Scrollable tracking details */
+#tracking-history {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Progress bar styles */
+#progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#progress-bar-fill {
+    height: 100%;
+    background-color: #3498DB;
+    border-radius: 5px;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li.history-item {
+    margin: 10px 0;
+    font-size: 18px;
+    transition: transform 0.2s ease-in-out, opacity 0.5s;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.emoji {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Dark mode support */
+.dark-mode {
+    background: #2C3E50;
+    color: #ECF0F1;
+}
+
+.dark-mode input[type="text"] {
+    background: #34495E;
+    color: white;
+    border: 1px solid #BDC3C7;
+}
+
+.dark-mode button {
+    background: #1ABC9C;
+}
+
+.dark-mode button:hover {
+    background: #16A085;
+}
+
+.dark-mode #progress-bar {
+    background-color: #34495E;
+}
+
+.dark-mode #progress-bar-fill {
+    background-color: #1ABC9C;
+}
+
+/* Dark mode toggle button */
+#toggle-dark-mode {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#toggle-dark-mode:hover {
+    background: #555;
+}
