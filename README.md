@@ -161,7 +161,7 @@ src/
 
 ## Author
 
-**Frederick Opoku**
+**Frederick Opoku Afriyie**
 GitHub: [@fredopoku](https://github.com/fredopoku)
 
 ---
