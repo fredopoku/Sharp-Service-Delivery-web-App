@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Toaster } from 'react-hot-toast'
 import { ThemeProvider } from './context/ThemeContext'
@@ -27,7 +27,7 @@ function NotFound() {
       <p className="text-slate-500 dark:text-slate-400 mb-8 max-w-xs">
         The page you're looking for doesn't exist or has been moved.
       </p>
-      <a href="/" className="btn-primary">Back to Home</a>
+      <Link to="/" className="btn-primary">Back to Home</Link>
     </motion.div>
   )
 }
@@ -51,7 +51,7 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/Sharp-Service-Delivery-web-App">
         <Toaster
           position="top-right"
           toastOptions={{
