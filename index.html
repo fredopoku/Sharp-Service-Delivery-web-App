@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <script>
+      // Restore path from 404.html redirect
+      (function() {
+        var r = new URLSearchParams(window.location.search).get('r');
+        if (r) window.history.replaceState(null, null, '/Sharp-Service-Delivery-web-App' + r);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Sharp Service Delivery — Fast, reliable package tracking and courier services." />
     <title>Sharp Service Delivery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/Sharp-Service-Delivery-web-App/assets/index-CbLg08eX.js"></script>
+    <script type="module" crossorigin src="/Sharp-Service-Delivery-web-App/assets/index-B6b7zGoy.js"></script>
     <link rel="stylesheet" crossorigin href="/Sharp-Service-Delivery-web-App/assets/index-Bu42fwuj.css">
   </head>
   <body>
